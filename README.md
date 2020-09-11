@@ -1,6 +1,8 @@
 # wiki_racer
 Wiki racer
 
+pip install -r requirements.txt
+
 Run with args, for example:   
     python main.py "https://en.wikipedia.org/wiki/Battle_of_Cr%C3%A9cy" "https://en.wikipedia.org/wiki/Wehrmacht"
     
