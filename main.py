@@ -38,8 +38,9 @@ def find_path(start_page, end_page):
 
 
 def format_refs(end):
+
     end_soup = BeautifulSoup(requests.get(end).content, 'html.parser')
-    title = end_soup.find('h1').text
+    title = end_soup.find('a', {'class': 'mw-redirect'}, href=True).text
     title = title.replace(' ', '_', len(title))
     basic_url = end[:end.find('/wiki/') + len('/wiki/')]
     return {end, basic_url + title}
